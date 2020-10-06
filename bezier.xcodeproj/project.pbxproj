@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2E519D252CCB6D00B355E6 /* CustomGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E519C252CCB6D00B355E6 /* CustomGestureRecognizer.swift */; };
 		C911EC36252AD3CB002128C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C911EC35252AD3CB002128C3 /* AppDelegate.swift */; };
 		C911EC38252AD3CB002128C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C911EC37252AD3CB002128C3 /* SceneDelegate.swift */; };
 		C911EC3A252AD3CB002128C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C911EC39252AD3CB002128C3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C2E519C252CCB6D00B355E6 /* CustomGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureRecognizer.swift; sourceTree = "<group>"; };
 		C911EC32252AD3CB002128C3 /* bezier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bezier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911EC35252AD3CB002128C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C911EC37252AD3CB002128C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				C911EC35252AD3CB002128C3 /* AppDelegate.swift */,
 				C911EC37252AD3CB002128C3 /* SceneDelegate.swift */,
 				C911EC39252AD3CB002128C3 /* ViewController.swift */,
+				6C2E519C252CCB6D00B355E6 /* CustomGestureRecognizer.swift */,
 				C911EC3B252AD3CB002128C3 /* Main.storyboard */,
 				C911EC3E252AD3CD002128C3 /* Assets.xcassets */,
 				C911EC40252AD3CD002128C3 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2E519D252CCB6D00B355E6 /* CustomGestureRecognizer.swift in Sources */,
 				C911EC3A252AD3CB002128C3 /* ViewController.swift in Sources */,
 				C911EC36252AD3CB002128C3 /* AppDelegate.swift in Sources */,
 				C911EC38252AD3CB002128C3 /* SceneDelegate.swift in Sources */,
