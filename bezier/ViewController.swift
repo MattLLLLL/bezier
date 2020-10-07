@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         let but = UIButton(type: .system)
         but.setTitleColor(.white, for: .normal)
         but.backgroundColor = .systemBlue
-        but.setTitle("Go", for: .normal)
+        but.setTitle("Preview", for: .normal)
         but.translatesAutoresizingMaskIntoConstraints = false
         but.layer.cornerRadius = 4
         but.addTarget(self, action: #selector(GoAction), for: .touchUpInside)
@@ -24,26 +24,16 @@ class ViewController: UIViewController {
     }()
     
     @objc func GoAction() {
+        let emoji = ["😀","😃","😁","😆","😇","😂","☺️","🤣","🤩","😎","🤪","😛","🧐","🥺","🥳","🥴","😴","🙄","😮","🥶"]
         let alert = SimpleAlert()
-        .addTitle("Apple Design Awards")
-        .addMessage("Join us in celebrating the developers who used their ingenuity, smarts, and savvy to build this year’s award-winning apps.")
-        .addButton("🟡 Yellow") {
-            self.view.backgroundColor = .yellow
-            
-        }
-        .addButton("🟠 Orange") {
-            self.view.backgroundColor = .orange
-            
-        }
-        .addButton("🟢 Green") {
-            self.view.backgroundColor = .green
-            
-        }
-        .cancelButton()
+        .addTitle(emoji.randomElement()!, .boldSystemFont(ofSize: 100))
+        .setProgressBar(TimeInterval(slider.value))
+        .addButton("Done")
         
         alert.endAnimatedCallBack = {
             print("animationDidStop")
         }
+        
         let boardHeightGap = (board.frame.height - board.frame.width) / 2
         let pinkPoint = view.convert(cubicPink.center, to: board)
         let bluePoint = view.convert(cubicBlue.center, to: board)
@@ -256,6 +246,8 @@ class ViewController: UIViewController {
             bezierLabel.bottomAnchor.constraint(equalTo: board.topAnchor, constant: 0),
             Go.centerYAnchor.constraint(equalTo: bezierLabel.centerYAnchor, constant: 0),
             Go.rightAnchor.constraint(equalTo: board.rightAnchor, constant: 0),
+            Go.heightAnchor.constraint(equalToConstant: 40),
+            Go.widthAnchor.constraint(equalToConstant: 70),
             boardBackground.centerYAnchor.constraint(equalTo: board.centerYAnchor, constant: 0),
             boardBackground.centerXAnchor.constraint(equalTo: board.centerXAnchor, constant: 0),
             boardBackground.heightAnchor.constraint(equalTo: board.widthAnchor, multiplier: 1),
@@ -375,7 +367,7 @@ class ViewController: UIViewController {
     func attributedString(text:String,string1:String,string2:String)  {
         let t = text as NSString
         let message = NSMutableAttributedString(string: text, attributes: [
-                                                    NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16.5)])
+                                                    NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)])
         let sr1 = t.range(of: string1)
         message.addAttributes([
             .foregroundColor: UIColor.red,

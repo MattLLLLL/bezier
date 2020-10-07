@@ -179,7 +179,7 @@ class SimpleAlert: UIViewController,CAAnimationDelegate {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .overFullScreen
         modalTransitionStyle = .crossDissolve
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         view.addSubview(backgroundView)
         backgroundView.addSubview(mainStackView)
         squareLayout = backgroundView.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 0)
@@ -227,7 +227,7 @@ class SimpleAlert: UIViewController,CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag { endAnimatedCallBack?() }
-        close()
+        //close()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
